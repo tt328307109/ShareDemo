@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/shareTextWx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享文本，指定微信"
+         />
+    <Button
+        android:id="@+id/shareTextQQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享文本，指定QQ"
+        />
+    <Button
+        android:id="@+id/shareTextAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享文本，自己选择"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+    <Button
+        android:id="@+id/sharePicQQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享图片，指定QQ好友"
+        />
+
+    <Button
+        android:id="@+id/sharePicWx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享图片，指定微信好友"
+        />
+    <Button
+        android:id="@+id/sharePicWxPyq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享图片，指定微信朋友圈"
+        />
+    <Button
+        android:id="@+id/sharePicAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享图片，自己选择"
+        />
+
+
+</LinearLayout>
