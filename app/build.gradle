@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.hyz.sharedemo"
+        applicationId "cn.melonmobile.pujin"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
