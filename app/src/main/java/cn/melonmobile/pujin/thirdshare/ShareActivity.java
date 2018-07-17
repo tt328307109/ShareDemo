@@ -18,6 +18,10 @@ import com.umeng.socialize.media.UMWeb;
 import cn.melonmobile.pujin.R;
 import cn.melonmobile.pujin.utils.ImageUtils;
 
+/**
+ * 友盟QQ分享release和debug版本都可以
+ * 微信分享，微信会对app签名进行校验，只有release的签名才能分享成功。(可以让debug和release签名一样)
+ */
 public class ShareActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button umshareQQ, umshareWx;
