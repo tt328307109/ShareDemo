@@ -1,5 +1,9 @@
 package com.example.hyz.sharedemo;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -44,22 +48,71 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 shareTextWxFun();
                 break;
             case R.id.shareTextQQ:
+                shareTextQQFun();
                 break;
             case R.id.shareTextAll:
+                shareTextAllFun();
                 break;
             case R.id.sharePicQQ:
+                sharePicQQFun();
                 break;
             case R.id.sharePicWx:
+                sharePicWxFun();
                 break;
             case R.id.sharePicWxPyq:
+                sharePicWxPyqFun();
                 break;
             case R.id.sharePicAll:
+                sharePicAllFun();
                 break;
         }
     }
 
-    private void shareTextWxFun() {
+    private void sharePicAllFun() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources() , R.drawable.name);
+        Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(
+                this.getContentResolver(), bitmap, null, null));
+        ShareUtils utils = new ShareUtils(this);
+        utils.sharePicAllFun("这是sharePicAllFun--msg" ,uri);
+    }
 
+    private void sharePicWxPyqFun() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources() , R.drawable.name);
+        Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(
+                this.getContentResolver(), bitmap, null, null));
+        ShareUtils utils = new ShareUtils(this);
+        utils.sharePicWxPyqFun("这是sharePicWxPyqFun--msg" ,uri);
+    }
+
+    private void sharePicWxFun() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources() , R.drawable.name);
+        Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(
+                this.getContentResolver(), bitmap, null, null));
+        ShareUtils utils = new ShareUtils(this);
+        utils.sharePicWxFun("这是sharePicWxFun--msg" ,uri);
+    }
+
+    private void sharePicQQFun() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources() , R.drawable.name);
+        Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(
+                this.getContentResolver(), bitmap, null, null));
+        ShareUtils utils = new ShareUtils(this);
+        utils.sharePicQQFun("这是sharePicQQFun--msg" ,uri);
+    }
+
+    private void shareTextAllFun() {
+        ShareUtils utils = new ShareUtils(this);
+        utils.shareTextAllFun("这是shareTextAllFun--msg");
+    }
+
+    private void shareTextQQFun() {
+        ShareUtils utils = new ShareUtils(this);
+        utils.shareTextQQFun("这是shareTextQQFun--msg");
+    }
+
+    private void shareTextWxFun() {
+        ShareUtils utils = new ShareUtils(this);
+        utils.shareTextWxFun("这是shareTextWxFun--msg");
     }
 
 
